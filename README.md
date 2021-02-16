@@ -1,5 +1,5 @@
 # HtmlExamples
-Simple Html examples
+Simple HTML examples
 
 Here are a few eforms I've created at my internship. For the Evaluation and Phone Stipend forms, you must download the accompaning JS file.
 
