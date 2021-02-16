@@ -1,0 +1,58 @@
+body {
+    margin: 1% 12% 2% 12%;
+    padding: 4%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.tableOne {
+    border: 2px solid black;
+    border-collapse: collapse;
+    height: 15%;
+    width: 100%;
+    margin: auto;
+}
+
+.td1  {
+    border: 2px solid black;
+    padding: 4px;
+}
+
+.tableTwo {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.tabletwo td {
+    padding: 3px;
+}
+
+.tableTwoTD1 {
+    border-top: 2px dotted black;
+}
+
+.tableTwoTD2 {
+    width: 20%;
+}
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin:4px 0;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  #DeptForStipend {
+    width: 45%;
+    padding: 12px 20px;
+    margin:4px 0;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  

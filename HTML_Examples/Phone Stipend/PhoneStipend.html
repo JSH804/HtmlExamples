@@ -1,0 +1,361 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="PhoneStipend.css">
+        <script src="PhoneStipend.js"></script>
+    </head>
+    <body>
+
+<!--Heading-->
+        <div class="heading">
+            <img src="Imagecomingsoon.jpg" style="height: 115px; width: 115px;">
+            <h2>Wireless Communication Stipend Request/Authorization</h2>
+        </div>
+
+<!--Section 1: Employee Information-->
+<form action="" method="">
+        <table class="tableOne">
+            <tr>
+                <th colspan="2">Section 1: Employee Information</th>
+            </tr>
+            <tr>
+                <td class="td1">
+                    <label for="EmployeeName">Employee Name:</label>
+                    <input type="text" name="EmployeeName" id="EmployeeName">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="EmployeeName"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+                <td class="td1">
+                    <label for="EmployeeId">Employee ID:</label>
+                    <input type="text" name="EmployeeId" id="EmployeeId">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="EmployeeId"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+            </tr>
+            <tr>
+                <td class="td1">
+                    <label for="DeptName">Department Name:</label>
+                    <input type="text" name="DeptName" id="DeptName">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="DeptName"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+                <td class="td1">
+                    <label for="OfficePhone">Office Phone#:</label>
+                    <input type="text" name="OfficePhone" id="OfficePhone">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="OfficePhone"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+            </tr>
+            <tr>
+                <td class="td1" colspan="2">
+                    <label for="AssigneeDevice">Assignee of departmental shared cellular phone device:</label>
+                    <input type="text" name="AssigneeDevice" id="AssigneeDevice">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="AssigneeDevice"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+            </tr>
+        </table>
+<!--Section 2: Stipend Request-->
+        <table class="tableTwo">
+            <tr>
+                <th colspan="2" style="border: 2px solid black;">Section 2: Stipend Request (check all that apply)</th>
+            </tr>
+            <tr>
+                <td style="font-weight: 900;">Monthly Stipend</td>
+            </tr>
+            <tr class="tableTwoTD1">
+                <td>
+                    <input class="stipend" id="PlanLevelOne" type="checkbox" value="30.00" onclick="totalIt()">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="PlanLevelOne"/>
+                        </xsl:attribute>
+                    </input>&nbsp;
+                    <label for="PlanLevelOne">Monthly Data Plan Level 1 (1GB)</label>
+                </td>
+                <td class="tableTwoTD2">
+                    $   30.00
+                </td>
+            </tr>
+            <tr class="tableTwoTD1">
+                <td>
+                    <input class="stipend" id="PlanLevelTwo" type="checkbox" value="40.00" onclick="totalIt()">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="PlanLevelTwo"/>
+                        </xsl:attribute>
+                    </input>&nbsp;
+                    <label for="PlanLevelTwo">Monthly Data Plan Level 2 (2GB)</label>
+                </td>
+                <td class="tableTwoTD2">
+                    $   40.00
+                </td>
+            </tr>
+            <tr class="tableTwoTD1">
+                <td>
+                    <input class="stipend" id="PlanLevelThree" type="checkbox" value="50.00" onclick="totalIt()">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="PlanLevelThree"/>
+                        </xsl:attribute>
+                    </input>&nbsp;
+                    <label for="PlanLevelThree">Monthly Data Plan Level 3 (4GB)</label>
+                </td>
+                <td class="tableTwoTD2">
+                    $   50.00
+                </td>
+            </tr>
+            <tr class="tableTwoTD1">
+                <td>
+                    <input class="stipend" id="IncidentalUserPlan" type="checkbox" value="10.00" onclick="totalIt()">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="IncidentalUserPlan"/>
+                        </xsl:attribute>
+                    </input>&nbsp;
+                    <label for="IncidentalUserPlan">Monthly Incidental User Plan*</label>
+                </td>
+                <td class="tableTwoTD2">
+                    $   10.00
+                </td>               
+            </tr>
+            <tr class="tableTwoTD1">
+                <td>
+                    <input class="stipend" id="BasicPlan" type="checkbox" value="40.00" onclick="totalIt()">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="BasicPlan"/>
+                        </xsl:attribute>
+                    </input>&nbsp;
+                    <label for="BasicPlan">Monthly Basic Service Plan</label>
+                </td>
+                <td class="tableTwoTD2">
+                    $   40.00
+                </td>               
+            </tr>
+            <tr class="tableTwoTD1">
+                <td>
+                    <input class="stipend" id="PhoneEquipmentAllowance" type="checkbox" value="150.00" onclick="totalIt()">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="PhoneEquipmentAllowance"/>
+                        </xsl:attribute>
+                    </input>&nbsp;
+                    <label for="PhoneEquipmentAllowance">Bi-annual phone/data equipment allowance&#8224;</label>
+                </td>
+                <td class="tableTwoTD2">
+                    $   150.00
+                </td>               
+            </tr>
+            <!--Auto Calculate Box for Stipend-->
+            <tr class="" style="border-top: 2px solid black; border-bottom: 1px solid black;">
+                <td style="font-weight: 550;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Total monthly stipend requested
+                </td>
+                <td>
+                    <input style="border: 1px solid black;"value="$0.00" readonly="readonly" type="text" id="TotalMonthlyStipend" name="TotalMonthlyStipend" />
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="TotalMonthlyStipend"/>
+                        </xsl:attribute>
+                    </input>
+                </td>               
+            </tr>
+
+            <tr class="" style="border-bottom: 1px solid black;">
+                <td style="font-weight: 550;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Total stipend requested
+                </td>
+                <td>
+                    <input type="text" style="border: 1px solid black;" value="" placeholder="$0.00" name="TotalStipend">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="TotalStipend"/>
+                        </xsl:attribute>
+                    </input>
+                </td>               
+            </tr>
+            <tr>
+                <td style="font-size: 14; font-style: italic">&#8224;For bi-annual equipment allowance, use this form and attach a copy of the invoice/receipt. This stipend can only be requested every two years.</td>
+            </tr>
+            <tr>
+                <td style="font-size: 14; font-style: italic">*Essential personnel/COOP- This category goes above and beyond the employee role, and the employee is eligible for the equipment needed to fulfill their job requirements.</td>
+            </tr>
+        </table>
+
+<!--Section 3: Justification-->
+
+        <table class="tableTwo">
+            <tr>
+                <th colspan="2" style="border: 2px solid black;">Section 3: Justification (check all that apply)</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" Name="RequiredInField" id="RequiredInField">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="RequiredInField"/>
+                        </xsl:attribute>
+                    </input>
+                    <label for="RequiredInField">The employee’s job requires that they work regularly in the field and need to be immediately accessible.</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" Name="RequiredOutsideHours" id="RequiredOutsideHours">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="RequiredOutsideHours"/>
+                        </xsl:attribute>
+                    </input>
+                    <label for="RequiredOutsideHours">The employee’s job requires that they need to be immediately accessible outside of normal business hours.</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" Name="EmployeeCritical" id="EmployeeCritical">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="EmployeeCritical"/>
+                        </xsl:attribute>
+                    </input>
+                    <label for="EmployeeCritical">The employee is responsible for critical infrastructure and needs to be immediately accessible at all times.</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="EmployeeTravels" id="EmployeeTravels">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="EmployeeTravels"/>
+                        </xsl:attribute>
+                    </input>
+                    <label for="EmployeeTravels">The employee travels and needs to be accessible or have access to information technology systems while traveling.</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" Name="IncreaseValue" id="IncreaseValue">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="IncreaseValue"/>
+                        </xsl:attribute>
+                    </input>
+                    <label for="IncreaseValue">Access via voice and or access to information technology systems via a mobile communications device would, in the judge of the supervisor, render the employee more productive and/or the service the employee provides more effective, and the cost of mobile communications service is therefore warranted.</label>
+                </td>
+            </tr>
+        </table>
+
+        <p style="font-weight: 800 ;">I hereby certify that all information is true and that I have read and understand the --Example-- Wireless Communication Stipend Policy.</p>
+<!--Policy Acknowledgement-->
+        <table class="tableTwo">
+            <tr>
+                <td colspan="2" style="font-weight: 800 ; border: 1px solid black;">I understand the following:</td>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>The stipend for wireless communication is paid through -Example- payroll</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Stipend rates will be reviewed and approved each fiscal year.</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>The stipend will be considered taxable income.</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>The monthly stipend allowance covers -Example- business-related costs.</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>I am responsible for purchasing the wireless communication device and service plan: The device is my personal property.</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>The stipend is not considered part of my base pay.</td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>If my wireless communication device is no longer active or needed for my job responsibilities, I must notify Human Resources.</td>
+            </tr>
+        </table>
+
+<!--Signature Lines-->
+        <h3>Employee Signature:___________________________________________</h3>
+        <h3>Date:________________________________________________________</h3>
+        <h3>Supervisor Signature (If needed):________________________________</h3>
+
+<!--Approvels-->
+
+        <table class="tableOne" style="margin-top: 3%;">
+            <tr>
+                <th colspan="2" style="font-weight: 800 ; border: 2px solid black;">Section 4: Approvals</th>
+            </tr>
+            <tr>
+                <td class="td1">
+                    <label for="CabinetMember">Cabinet Member Name:</label>
+                    <input type="text" name="CabinetMember" id="CabinetMember">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="CabinetMember"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+                <td class="td1">
+                    <label for="ChancellorName">Chancellor (or designee) Name:</label>
+                    <input type="text" name="ChancellorName" id="ChancellorName">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="ChancellorName"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+            </tr>
+            <tr>
+                <td class="td1">
+                    <label for="CabinetMemberTitle">Title:</label>
+                    <input type="text" name="CabinetMemberTitle" id="CabinetMemberTitle">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="CabinetMemberTitle"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+                <td class="td1">
+                    <label for="ChancellorTitle">Title:</label>
+                    <input type="text" name="ChancellorTitle" id="ChancellorTitle">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="ChancellorTitle"/>
+                        </xsl:attribute>
+                    </input>
+                </td>
+            </tr>
+            <!--Approval Signature Placeholders-->
+            <tr style="height: 80px;">
+                <td class="td1" style="vertical-align: top; text-align: left;">
+                    Signature:
+                </td>
+                <td class="td1" style="vertical-align: top; text-align: left;">
+                    Signature:
+                </td>
+            </tr>
+            <tr style="height: 80px;">
+                <td class="td1" style="vertical-align: top; text-align: left;">
+                    Date:
+                </td>
+                <td class="td1" style="vertical-align: top; text-align: left;">
+                    Date:
+                </td>
+            </tr>
+        </table>
+<!---Example- Department Stipend Reimbursement-->
+        <h4 style="margin-bottom: 2px; margin-top: 30px;">-Example- Department for Stipend Reimbursement:</h4>
+        <input type="text"  style="border: 1.5px solid black;" Name="DeptForStipend" id="DeptForStipend">
+            <xsl:attribute name="value">
+                <xsl:value-of select="DeptForStipend"/>
+            </xsl:attribute>
+        </input>
+
+<!--Form Submit-->
+        <div style="margin-top: 15px;">
+            <input style="float:right; height: 40px; width: 75px;"type="submit" value="Submit">
+        </div>
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+﻿@using Microsoft.Data.SqlClient.Server
+@model Foodie.Models.Restaurant
+
+@{
+    ViewData["Title"] = "Details";
+    <script>
+        var address = "@Model.Address";
+    </script>
+}
+
+<h1>@Html.DisplayFor(Model => Model.Name)</h1>
+
+<div>
+    <hr/>
+            <div class="d-flex justify-content-center">
+                @if (Model.Images.Count >= 0)
+                {
+                    <div id="myCarousel" class="carousel w-75" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            @{
+                                var firstfirst = true;
+                                var count = 0;
+
+                            }
+                            @foreach (var item in Model.Images)
+                            {
+                                <li data-target="#myCarousel" data-slide-to="@count" class="@(firstfirst ? Html.Raw("active") : Html.Raw(""))"></li>
+                                firstfirst = false;
+                                count += 1;
+                            }
+
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            @{
+                                var first = true;
+                            }
+                            @foreach (var item in Model.Images)
+                            {
+                                <div class="carousel-item @(first ? Html.Raw("active") : Html.Raw(""))">
+                                    <img src=@string.Format("/Images/{0}", item.Title) class="d-block w-100" />
+                                </div>
+                                first = false;
+                            }
+
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <img src="@Url.Content("/Images/Imagecomingsoon.jpg")" class="img-responsive noimage" alt="Responsive image" />
+                    </div>
+                }
+            </div>
+    <div class="container my-3">
+        <div class="row">
+            <p class="col my-5">@Html.DisplayFor(Model => Model.Note)</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @*Section for map*@
+                <div id="map"></div>
+            </div>
+            <div class="col-md-6">
+                <p class="my-0 py-0">@Html.DisplayFor(Model => Model.Name)-</p>
+                <p class="my-0 py-0">@Html.DisplayFor(Model => Model.Phone)</p>
+                <p class="my-0 py-0">@Html.DisplayFor(Model => Model.Street)</p>
+                <p class="my-0 py-0">@Html.DisplayFor(Model => Model.City)</p>
+                <p class="my-0 py-0">@Html.DisplayFor(Model => Model.State)</p>
+                <p class="my-0 py-0">@Html.DisplayFor(Model => Model.Zip)</p>
+            </div>
+        </div>
+    </div>
+            
+
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script type="text/javascript">
+    document.getElementById("map").onload = function () {
+        getRestaurantMap(address)
+    }
+</script>

@@ -1,0 +1,676 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="EWPEvaluations.css">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+        <script type="text/javascript" src="EWPEvaluations.js"></script>       -->
+
+    </head>
+
+    <body>
+        <!--Table One-->
+        <div>
+            <table class="tableone">
+                <tr>
+                    <td><h1>Employee Work Profile</h1></td>
+                    <td><img src="Imagecomingsoon.jpg" style="height: 115; width: 115;"/></td>
+                <tr>
+                    <td><h2>Employee Self Assessment</h2></td>
+                </tr>
+            </table>
+        </div>
+        <!--Table Two-->
+        <form>
+        <div>
+            <table class="tabletwo">
+                <tr>
+                    <th colspan="2"><h3>Part V - Employee/Position Identification Infomation</h3></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="PositionsNumber">Position Number:</label>
+                        <input type="text" id="PositionsNumber" name="PositionsNumber" autocomplete="off">
+                            <xsl:attribute name="value">
+                                <xsl:value-of select="PositionsNumber"/>
+                            </xsl:attribute>
+                        </input>
+                    </td>
+                    <td>
+                        <label for="AgencyName">Agency Name:</label>
+                        <input type="text" id="AgencyName" name="AgencyName" autocomplete="off">
+                            <xsl:attribute name="value">
+                                <xsl:value-of select="AgencyName"/>
+                            </xsl:attribute>
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="AgencyCode">Agency Code:</label>
+                        <input type="text" id="AgencyCode" name="AgencyCode" autocomplete="off">
+                            <xsl:attribute name="value">
+                                <xsl:value-of select="AgencyCode"/>
+                            </xsl:attribute>
+                        </input>
+                    </td>
+                    <td>
+                        <label for="Division">Division/Department:</label>
+                        <input type="text" id="Division" name="Division" autocomplete="off">
+                            <xsl:attribute name="value">
+                                <xsl:value-of select="Division"/>
+                            </xsl:attribute>
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="EmplName">Employee Name:</label>
+                        <input type="text" id="EmplName" name="EmplName" autocomplete="off">
+                            <xsl:attribute name="value">
+                                <xsl:value-of select="EmplName"/>
+                            </xsl:attribute>
+                        </input>
+                    </td>
+                    <td>
+                        <label for="EmplID">Employee ID Number:</label>
+                        <input type="text" id="EmplID" name="EmplID" autocomplete="off">
+                            <xsl:attribute name="value">
+                                <xsl:value-of select="EmplID"/>
+                            </xsl:attribute>
+                        </input>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--Table Three-->
+        <div>
+            <table class="tablethree" style="height: 100%;">
+                <tr>
+                    <th colspan="2"><h3>PART VI - Performance Evaluation</h3></th>
+                </tr>
+                <tr>
+                    <td class="tablethreecenter"><p>Core Responsibilities -<br> Rating Earned</p></td>
+                    <td class="tablethreecenter"><p>Core Responsibilities - Comments on Results Achieved</p></td>
+                </tr>
+
+                <tr>        
+                    <!--Group A-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">A.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="CoreRatingA" id="CoreRatingA" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingA"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingA" id="CoreRatingA" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingA"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingA" id="CoreRatingA" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingA"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="CoreCommentA" id="CoreCommentA" rows="8">
+                            <xsl:value-of select="CoreCommentA"/>
+                        </textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!--Group B-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">B.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="CoreRatingB" id="CoreRatingB" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingB"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingB" id="CoreRatingB" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingB"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingB" id="CoreRatingB" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingB"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <textarea name="CoreCommentB" id="CoreCommentB" rows="8">
+                            <xsl:value-of select="CoreCommentB"/>
+                        </textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!--Group C-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">C.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="CoreRatingC" id="CoreRatingC" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingC"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingC" id="CoreRatingC" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingC"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingC" id="CoreRatingC" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingC"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="CoreCommentC" id="CoreCommentC" rows="8">
+                            <xsl:value-of select="CoreCommentC"/>
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <!--Group D-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">D.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="CoreRatingD" id="CoreRatingD" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingD"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingD" id="CoreRatingD" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingD"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingD" id="CoreRatingD" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingD"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="CoreCommentD" id="CoreCommentD"  rows="8">
+                            <xsl:value-of select="CoreCommentD"/>
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <!--Group E-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">E.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="CoreRatingE" id="CoreRatingE" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingE"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingE" id="CoreRatingE" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingE"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingE" id="CoreRatingE" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingE"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="CoreCommentE" id="CoreCommentE"  rows="8">
+                            <xsl:value-of select="CoreCommentE"/>
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <!--Group F-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">F.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="CoreRatingF" id="CoreRatingF" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingF"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingF" id="CoreRatingF" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingF"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="CoreRatingF" id="CoreRatingF" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="CoreRatingF"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="CoreCommentF" id="CoreCommentF"  rows="8">
+                            <xsl:value-of select="CoreCommentF"/>
+                        </textarea>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td class="tablethreecenter"><p>Special Assignments -<br> Rating Earned</p></td>
+                    <td class="tablethreecenter"><p>Special Assignments - Comments on Results Achieved</p></td>
+                </tr>
+                <tr>
+                    <!--Special Assignment - Group G-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">G.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="SplAsgmtRatingG" id="SplAsgmtRatingG" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="SplAsgmtRatingG"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="SplAsgmtRatingG" id="SplAsgmtRatingG" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="SplAsgmtRatingG"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="SplAsgmtRatingG" id="SplAsgmtRatingG" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="SplAsgmtRatingG"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="SplAsgmtCommentG" id="SplAsgmtCommentG"  rows="8">
+                            <xsl:value-of select="SplAsgmtCommentG"/>
+                        </textarea>
+                    </td>                         
+                </tr>
+                <tr>
+                    <!--Special Assignment - Group H-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">H.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="SplAsgmtRatingH" id="SplAsgmtRatingH" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="SplAsgmtRatingH"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="SplAsgmtRatingH" id="SplAsgmtRatingH" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="SplAsgmtRatingH"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="SplAsgmtRatingH" id="SplAsgmtRatingH" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="SplAsgmtRatingH"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="SplAsgmtCommentH" id="SplAsgmtCommentH"  rows="8">
+                            <xsl:value-of select="SplAsgmtCommentH"/>
+                        </textarea>
+                    </td>  
+                </tr>
+                <tr>
+                    <td class="tablethreecenter"><p>Department<br> Objectives - Rating Earned</p></td>
+                    <td class="tablethreecenter"><p>Agency/Department Objectives - Comments on Results Achieved</p></td> 
+                </tr>
+                <tr>
+                    <!--Agency/Department Objectives - Group I-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">I. </span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="AgencyObjRatingI" id="AgencyObjRatingI" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="AgencyObjRatingI"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="AgencyObjRatingI" id="AgencyObjRatingI" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="AgencyObjRatingI"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="AgencyObjRatingI" id="AgencyObjRatingI" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="AgencyObjRatingI"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="AgencyObjCommentI" id="AgencyObjCommentI" rows="8">
+                            <xsl:value-of select="AgencyObjCommentI"/>
+                        </textarea>
+                    </td>  
+                </tr>
+                <tr>
+                    <!--Agency/Department Objectives - Group J-->       
+                    <td class="tablethreecenter">
+                        <table>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;">
+                                    <span style="text-align: right;">J.</span>
+                                </td>
+                                <td class="tablethreecentercoltwo" style="border: none;">
+                                    <input type="radio" name="AgencyObjRatingJ" id="AgencyObjRatingJ" value="Extraordinary Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="AgencyObjRatingJ"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Extraordinary Contributor</span>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="AgencyObjRatingJ" id="AgencyObjRatingJ" value="Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="AgencyObjRatingJ"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Contributor</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablethreecentercolone" style="border: none;"></td>
+                                <td class="tablethreecentercoltwo" colspan="2" style="border: none;">
+                                    <input type="radio" name="AgencyObjRatingJ" id="AgencyObjRatingJ" value="Below Contributor">
+                                        <xsl:value-attribute name="value">
+                                            <xsl:value-of select="AgencyObjRatingJ"/>
+                                        </xsl:attribute>
+                                    </input>
+                                    <span>Below Contributor</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="position: relative;";>
+                        <textarea name="AgencyObjCommentJ" id="AgencyObjCommentJ" rows="8">
+                            <xsl:value-of select="AgencyObjCommentJ"/>
+                        </textarea>
+                    </td>                      
+                </tr>
+                <!--Comments for Performance cycle-->
+                <tr>
+                    <td colspan="2" id="otherresultsbottom">
+                        <p>Other significant results for the performance cycle:</p>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2" style="position: relative;" id="otherresultstop">
+                        <textarea name="OtherResultsComment" id="OtherResultsComment" rows="8">
+                            <xsl:value-of select="OtherResultsComment"/>
+                        </textarea>
+                    </td>                       
+                </tr>
+                <!--Comments for Year End learning accomplishments-->
+                <tr>
+                    <th colspan="2"><h3>Part VII - Employee Development Results</h3></th>
+                </tr>
+                <tr>
+                    <td colspan="2" id="yearendbottom">
+                        <p>Year-end Learning Accomplishments:</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan="2" style="position: relative;" id="yearendtop">
+                        <textarea name="LearningAccomplishments" id="LearningAccomplishments" rows="8">
+                            <xsl:value-of select="LearningAccomplishments"/>
+                        </textarea>
+                    </td>                       
+                </tr>
+
+                <tr>
+                    <th colspan="2"><h3>Part VIII - Overall Results Assessment and Rating Earned</h3></th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <P>An employee receiving an overall rating of "Below Contributor" must have received at least one Notice of  Improvement Needed/Substandard Performance form during the performance cycle.</P>
+                        <p>An employee who earns an overall rating of "Below Contributor" must be reviewed again within three months.</p>
+                        <p>An employee receiving an overall rating of "Extraordinary Contributor" must have received at least one Acknowledgment of Extraordinary Contribution form during the performance cycle.  However, the receipt of an Acknowledgment of Extraordinary Contribution form does not guarantee an overall performance rating of "Extraordinary Contributor" for that performance cycle.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--overall rating table with radios-->
+        <div>
+            <table class="overalltable">
+                <tr>
+                    <th><p>Overall Rating Earned</p></th>
+                </tr>
+                <tr>
+                    <td style="border: none;">
+                        <input type="radio" name="OverallRating" id="OverallRating" value="Extraordinary Contributor">
+                            <xsl:value-attribute name="value">
+                                <xsl:value-of select="OverallRating"/>
+                            </xsl:attribute>
+                        </input>
+                        <span>Extraordinary Contributor</span>  
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: none;">
+                        <input type="radio" name="OverallRating" id="OverallRating" value="Contributor">
+                            <xsl:value-attribute name="value">
+                                <xsl:value-of select="OverallRating"/>
+                            </xsl:attribute>
+                        </input>
+                        <span>Contributor</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: none;">
+                        <input type="radio" name="OverallRating" id="OverallRating" value="Below Contributor">
+                            <xsl:value-attribute name="value">
+                                <xsl:value-of select="OverallRating"/>
+                            </xsl:attribute>
+                        </input>
+                        <span>Below Contributor</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--Employee Signature Section-->
+        <div class="emplsign">
+            <table class="emplsign">
+                <tr>
+                    <td class="emplsigntd">
+                        <P>Employee Signature:</P>
+                    </td>
+                    <td >
+                        <p>Date:</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    </body>
+  
+
+</html>

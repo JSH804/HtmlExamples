@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Models.Restaurant>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Please check out my review. These are some of my favorite places to eat.</h2>
+
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="card float-left m-3" style="width: 18rem;">
+                <div class="embed-responsive embed-responsive-4by3">
+                    @if (item.Images.Count > 0)
+                    {
+                        <img src="@String.Format("/Images/{0}", item.Images.FirstOrDefault().Title)" class="card-img-top embed-responsive-item" alt="...">
+                    }
+                    else
+                    {
+                        <img src="/Imagecomingsoon.jpg" class="card-img-top embed-responsive-item">
+
+                    }
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Category.Type)</p>
+                    <a class="btn btn-secondary btn-outline-primary" asp-action="Details" asp-route-id="@item.Id">Review</a>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+    </div>
+</div>
+
+

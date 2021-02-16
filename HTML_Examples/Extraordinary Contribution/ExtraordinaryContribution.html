@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="ExtraordinaryContribution.css"/>
+    </head>
+    <body>
+
+        <div class ="heading">
+            <h2>Experis - Test HTML Example</h2>
+            <h1>PERFORMANCE MANAGEMENT</h1>
+            <br/>
+            <h2>ACKNOWLEDGEMENT OF EXTRAORDINARY</h2>
+            <h2>CONTRIBUTION</h2>
+            <br/>   
+        </div>
+
+        <Form action="" method="">
+            <!--Table for name, employee id, department, agency-->
+            <div>
+                <table class="tableOne">
+                    <tr class="">
+                        <td class="td1">
+                            <label for="EmplName">Name:</label></br>
+                            <input type="text" id="EmplName" name="EmplName" required>
+                        </td>      
+                        <td class="td1">
+                            <label for="EmplID">Employee ID# (Optional)</label></br>
+                            <input type="text" id="EmplID" name="EmplID">  
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td class="td1">
+                            <label for="Dept">Department:</label></br>
+                            <input type="text" id="Dept" name="Dept" required>
+                        </td>      
+                        <td class="td1">
+                            <label for="Agency">Agency:</label></br>
+                            <input type="text" id="Agency" name ="Agency" required>  
+                        </td>
+                    </tr>
+                    <tr class="">
+                        <td class="td1">
+                            <label for="WorkTitle">Work Title:</label></br>
+                            <input type="text" id="WorkTitle" name="WorkTitle" required>
+                        </td>      
+                        <td class="td1">
+                            <label for="PositionNumber">Position Number:</label></br>
+                            <input type="text" id="PositionNumber" name="PositionNumber" required>  
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--Extraordinary Description Comment Section-->
+            <div>
+                <p>This form documents and recognizes you for the extraordinary contribution you have made in the performance of your duties. You are commended for your exemplary accomplishment and performance.</p>
+                <label for="ExtraordinaryDesc">Description of specific extraordinary contributions:</label></br>
+                <textarea id="ExtraordinaryDesc" name="ExtraordinaryDesc" rows="5" cols="45" required></textarea>
+            </div>
+            <!--Supervisor Section-->
+            <div class="superSign">
+                <table>
+                    <td class="">
+                        <label for="SupervisorSign">Supervisor Signature:</label>
+                        <input type="text" id="SupervisorSign" name="SupervisorSign">
+                    </td>      
+                    <td class="">
+                        <label for="SuperSignDate">Date:</label>
+                        <input type="text" id="SuperSignDate" name="SuperSignDate">  
+                    </td>
+                </table>
+            </div>
+            <!--Reviewer Section-->
+            <div>
+                <label for="ReviewerComment" required>Reviewer Comments:</label></br>
+                <textarea id="ReviewerComment" name="ReviewerComment" rows="5" cols="45"></textarea>
+            </div>
+            <div class="Sign">
+                <table>
+                    <td class="">
+                        <label for="ReviewerSign">Reviewer Signature:</label>
+                        <input type="text" id="ReviewerSign" name="ReviewerSign">
+                    </td>      
+                    <td class="">
+                        <label for="ReviewerSignDate">Date:</label>
+                        <input type="text" id="ReviewerSignDate" name="ReviewerSignDate">  
+                    </td>
+                </table>
+            </div>
+            <!--Employee Section-->
+            <div>
+                <label for="EmplComment">Employee Comments:</label></br>
+                <textarea id="EmplComment" name ="EmplComment" rows="5" cols="45"></textarea>
+            </div>
+            <div class="Sign">
+                <table>
+                    <td class="">
+                        <label for="EmplSign">Employee Signature:</label>
+                        <input type="text" id="EmplSign" name="EmplSign">
+                    </td>      
+                    <td class="">
+                        <label for="EmplSignDate">Date:</label>
+                        <input type="text" id="EmplSignDate" name="EmplSignDate">  
+                    </td>
+                </table>
+            </div>
+            <div id="ButtonDiv">
+                <button type="submit" formmethod="post" value="Submit">Submit</button>
+            </div>
+        </Form>
+    </body>
+</html>
